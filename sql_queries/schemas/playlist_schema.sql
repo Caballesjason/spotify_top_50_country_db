@@ -7,4 +7,4 @@ CREATE TABLE Playlist(
 	,date_loaded DATE
 	,FOREIGN KEY (track_id) REFERENCES Tracks(track_id)
 	,FOREIGN KEY (album_id) REFERENCES Albums(album_id)
-)
+);
