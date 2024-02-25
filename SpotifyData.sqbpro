@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="/Users/jason/Desktop/MSDS/CSE_560/termProject/SpotifyData.db" readonly="0" foreign_keys="" case_sensitive_like="" temp_store="" wal_autocheckpoint="" synchronous=""/><attached/><window><main_tabs open="structure browser pragmas query" current="1"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1285"/><column_width id="4" width="0"/></tab_structure><tab_browse><current_table name="0,0:"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="playlist_schema.sql">-- PLAYLIST TABLE SCHEMA --
+CREATE TABLE Playlist(
+	track_id VARCHAR(32)
+	,track_name VARCHAR(32)
+	,album_id VARCHAR(32)
+	,album_name VARCHAR(32)
+	,date_loaded DATE
+	,FOREIGN KEY (track_id) REFERENCES Tracks(track_id)
+	,FOREIGN KEY (album_id) REFERENCES Albums(album_id)
+);</sql><sql name="track_schema.sql">-- TRACKS TABLE SCHEMA --
+CREATE TABLE Tracks(
+	track_id VARCHAR(32)
+	,track_name VARCHAR(32)
+	,PRIMARY KEY  (track_id)
+);
+
+</sql><sql name="album_schema.sql">	-- ALBUMS TABLE SCHEMA -- 
+	CREATE TABLE Albums(
+		album_id VARCHAR(32)
+		,album_name VARCHAR(32)
+	,PRIMARY KEY (album_id)
+	);</sql><sql name="SQL 5">--- ARTISTS TABLE SCHEMA --
+CREATE TABLE Artists(
+	artist_id VARCHAR(32)
+	,artist_name VARCHAR(32)
+	,PRIMARY KEY (artist_id)
+	);
+	</sql><sql name="SQL 6"></sql><current_tab id="2"/></tab_sql></sqlb_project>

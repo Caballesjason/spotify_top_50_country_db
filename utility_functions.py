@@ -36,8 +36,9 @@ def create_table(conn, create_table_sql, drop_table_name=None):
         c.execute(create_table_sql)
     except Error as e:
         print(e)
-        
-def execute_sql_statement(sql_statement, conn):
+
+
+def execute_sql_query(sql_statement, conn):
     cur = conn.cursor()
     cur.execute(sql_statement)
 
