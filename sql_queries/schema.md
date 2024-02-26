@@ -12,6 +12,7 @@ Table Playlist {
 Table Tracks {
     track_id VARCHAR(32) [PRIMARY KEY]
     track_name VARCHAR(32)
+    genre VARCHAR(32)
     album_id VARCHAR(32)
     duration_ms INTEGER
     explicit BOOLEAN
@@ -20,15 +21,13 @@ Table Tracks {
 Table Albums {
     album_id VARCHAR(32) [PRIMARY KEY]
     album_name VARCHAR(32)
-    genre VARCHAR(32)
     label VARCHAR(64)
     total_tracks INTEGER
     date_released DATE
 
 }
 Table Genres {
-  track_id VARCHAR(32)
-  genre VARCHAR(32)
+  genre VARCHAR(32) [PRIMARY KEY]
 }
 
 Table Labels {
@@ -55,8 +54,8 @@ Ref: Playlist.track_id > Tracks.track_id
 Ref: Playlist.album_id > Albums.album_id
 
 Ref: Tracks.album_id > Albums.album_id
+Ref: Tracks.genre > Genres.genre
 
-Ref: Genres.track_id > Tracks.track_id
 
 Ref: Albums.label > Labels.label
 
