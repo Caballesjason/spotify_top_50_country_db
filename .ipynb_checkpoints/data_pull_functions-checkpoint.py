@@ -4,11 +4,10 @@ from spotipy.oauth2 import SpotifyClientCredentials
 import os
 from datetime import date
 
-
+"""
+get_global_top_fifty_data returns a list of tuple where each tuple is a track data in the format (track, track_id, album, album_id)
+"""
 def get_global_top_fifty_playlist(sp):
-    """
-    get_global_top_fifty_data returns a list of tuple where each tuple is a track data in the format (track, track_id, album, album_id)
-    """
     playlist_id = "https://open.spotify.com/playlist/37i9dQZEVXbMDoHDwVN2tF?si=87c0069b7da449b7"
     top_fifty_global = sp.playlist_tracks(playlist_id)
 
@@ -34,11 +33,10 @@ def get_global_top_fifty_playlist(sp):
 
     return tuples
 
-
+"""
+get_all_song_ids returns a list of all the unique tracks and their ids for the track table as a dict.
+"""
 def get_all_top_fifty_tracks(sp):
-    """
-    get_all_song_ids returns a list of all the unique tracks and their ids for the track table as a dict.
-    """
     playlist_id = "https://open.spotify.com/playlist/37i9dQZEVXbMDoHDwVN2tF?si=87c0069b7da449b7"
     top_fifty_global = sp.playlist_tracks(playlist_id)
 
@@ -58,11 +56,10 @@ def get_all_top_fifty_tracks(sp):
             continue
     return tracks
 
-
-def get_all_top_fifty_artists(sp):
-    """
+"""
 get_all_top_fifty_artists returns the artist that related to all of the songs in a playlist
-    """
+"""
+def get_all_top_fifty_artists(sp):
     playlist_id = "https://open.spotify.com/playlist/37i9dQZEVXbMDoHDwVN2tF?si=87c0069b7da449b7"
     top_fifty_global = sp.playlist_tracks(playlist_id)
     top_fifty_global_tracks = top_fifty_global.get("items")
@@ -78,11 +75,10 @@ get_all_top_fifty_artists returns the artist that related to all of the songs in
     tuples = list(tuples)
     return tuples
 
-
-def get_all_top_fifty_albums(sp):
-    """
+"""
 get_all_top_fifty_albums returns the artist that related to all of the songs in a playlist
-    """
+"""
+def get_all_top_fifty_albums(sp):
     playlist_id = "https://open.spotify.com/playlist/37i9dQZEVXbMDoHDwVN2tF?si=87c0069b7da449b7"
     top_fifty_global = sp.playlist_tracks(playlist_id)
     top_fifty_global_tracks = top_fifty_global.get("items")
