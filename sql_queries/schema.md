@@ -1,32 +1,29 @@
-# E/L Diagram
-[Click here to go to website that generates diagram](https://dbdiagram.io/d)
-
-Copy and paste the below text for the diagram
+Click [here](https://dbdiagram.io/d/65dbdc3f5cd0412774c6ba17) and upload the below text to get the E/L diagram!
 
 ```
 Table Playlist {
-	track_id VARCHAR(32)
-	track_name VARCHAR(32)
-	album_id VARCHAR(32)
-	album_name VARCHAR(32)
-	date_loaded DATE
+    track_id VARCHAR(32)
+    track_name VARCHAR(32)
+    album_id VARCHAR(32)
+    album_name VARCHAR(32)
+    date_loaded DATE
 }
 
 Table Tracks {
-	track_id VARCHAR(32) [PRIMARY KEY]
-	track_name VARCHAR(32)
-	album_id VARCHAR(32)
-	duration_ms INTEGER
-	explicit BOOLEAN
+    track_id VARCHAR(32) [PRIMARY KEY]
+    track_name VARCHAR(32)
+    album_id VARCHAR(32)
+    duration_ms INTEGER
+    explicit BOOLEAN
 }
 
 Table Albums {
-	album_id VARCHAR(32) [PRIMARY KEY]
-	album_name VARCHAR(32)
-	genre VARCHAR(32)
-	label VARCHAR(64)
-	total_tracks INTEGER
-	date_released DATE
+    album_id VARCHAR(32) [PRIMARY KEY]
+    album_name VARCHAR(32)
+    genre VARCHAR(32)
+    label VARCHAR(64)
+    total_tracks INTEGER
+    date_released DATE
 
 }
 Table Genres {
@@ -35,8 +32,7 @@ Table Genres {
 }
 
 Table Labels {
-  label VARCHAR(32)
-  PRIMARY KEY (label)
+  label VARCHAR(32) [PRIMARY KEY]
 }
 Table Artists {
   artist_id VARCHAR(32) [PRIMARY KEY]
