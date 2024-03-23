@@ -3,6 +3,9 @@ from utility_functions  import execute_sql_query
 
 
 def insert_tracks(data, conn):
+    """
+    insert_tracks takes the data we pulled from get_all_song_ids and uploads it to our database!
+    """
     get_current_data_query = """
     SELECT * FROM Tracks;
     """
