@@ -1,4 +1,4 @@
--- AlbumArtists SCHEMA --
+-- AlbumArtists Schema --
 CREATE TABLE AlbumArtists(
     album_id VARHCAR(32)
     ,artist_id VARCHAR(32)

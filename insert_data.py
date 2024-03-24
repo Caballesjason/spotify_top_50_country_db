@@ -2,73 +2,74 @@ from utility_functions import create_connection
 from utility_functions  import execute_sql_query
 
 
-def insert_tracks(data, conn):
-    """
-    insert_tracks takes the data we pulled from get_all_song_ids and uploads it to our database!
-    """
-    get_current_data_query = """
-    SELECT * FROM Tracks;
-    """
-    
+def AlbumArtists_insert(data, conn):
     insert_query = """
-    INSERT INTO Tracks (track_id, track_name) VALUES (?, ?)
+    INSERT INTO AlbumArtists (album_id, artist_id) VALUES (?, ?)
     """
-    
     cur = conn.cursor()
     with conn:
-        
-    # grab current data
-        current_data = execute_sql_query(get_current_data_query, conn)
-        current_data_set = set(current_data)
-        data_set = set(data)
-        new_data = data_set - current_data_set
-        new_rows = list(new_data)
     # to insert data
-        cur.executemany(insert_query, new_rows)
+        cur.executemany(insert_query, data)
         conn.commit()
 
-
-def insert_albums(data, conn):
-    get_current_data_query = """
-    SELECT * FROM Albums;
-    """
-    
+def Albums_insert(data, conn):
     insert_query = """
-    INSERT INTO Albums (album_id, album_name) VALUES (?, ?)
+    INSERT INTO Albums (album_id, album_name, total_tracks, date_released) VALUES (?,?,?,?)
     """
-    
     cur = conn.cursor()
     with conn:
-        
-    # grab current data
-        current_data = execute_sql_query(get_current_data_query, conn)
-        current_data_set = set(current_data)
-        data_set = set(data)
-        new_data = data_set - current_data_set
-        new_rows = list(new_data)
     # to insert data
-        cur.executemany(insert_query, new_rows)
+        cur.executemany(insert_query, data)
         conn.commit()
 
-
-def insert_artists(data, conn):
-    get_current_data_query = """
-    SELECT * FROM Artists;
-    """
-    
+def Artists_insert(data, conn):
     insert_query = """
-    INSERT INTO Artists (artist_id, artist_name) VALUES (?, ?)
+    INSERT INTO Artists (artist_id, artist_name, nbr_of_followers, popularity) VALUES (?,?,?,?)
     """
-    
     cur = conn.cursor()
     with conn:
-        
-    # grab current data
-        current_data = execute_sql_query(get_current_data_query, conn)
-        current_data_set = set(current_data)
-        data_set = set(data)
-        new_data = data_set - current_data_set
-        new_rows = list(new_data)
     # to insert data
-        cur.executemany(insert_query, new_rows)
+        cur.executemany(insert_query, data)
+        conn.commit()
+
+def GenreArtists_insert(data, conn):
+    insert_query = """
+    INSERT INTO GenreArtists (artist_id, genre) VALUES (?,?)
+    """
+    cur = conn.cursor()
+    with conn:
+    # to insert data
+        cur.executemany(insert_query, data)
+        conn.commit()
+
+def Playlists_insert(data, conn):
+    insert_query = """
+    INSERT INTO Playlists (name, track_id, track_name, album_id, album_name) VALUES (?,?,?,?,?)
+    """
+    cur = conn.cursor()
+    with conn:
+    # to insert data
+        cur.executemany(insert_query, data)
+        conn.commit()
+
+def TrackArtists_insert(data, conn):
+    insert_query = """
+    INSERT INTO TrackArtists (track_id, artist_id) VALUES (?,?)
+    """
+    cur = conn.cursor()
+    with conn:
+    # to insert data
+        cur.executemany(insert_query, data)
+        conn.commit()
+
+def Tracks_insert(data, conn):
+    insert_query = """
+    INSERT INTO Tracks (track_id,track_name,album_id,duration_ms,explicit,
+    current_popularity,acousticness,danceability,instrumentalness, key_signature,
+    mode,tempo,time_signature,valence) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+    """
+    cur = conn.cursor()
+    with conn:
+    # to insert data
+        cur.executemany(insert_query, data)
         conn.commit()

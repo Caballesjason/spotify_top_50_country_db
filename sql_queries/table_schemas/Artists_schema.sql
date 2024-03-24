@@ -1,4 +1,4 @@
--- ARTISTS TABLE SCHEMA -- 
+-- Artists Schema -- 
 CREATE TABLE Artists(
     artist_id VARCHAR(32)
     ,artist_name VARCHAR(32)

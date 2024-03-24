@@ -1,4 +1,4 @@
--- TrackArtists SCHEMA --
+-- TrackArtists Schema --
 CREATE TABLE TrackArtists(
     track_id VARHCAR(32)
     ,artist_id VARCHAR(32)
