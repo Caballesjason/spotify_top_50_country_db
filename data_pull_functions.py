@@ -112,7 +112,7 @@ def get_tracks_table_data(sp, playlist_data):
         track_audio_features = audio_features.get(track_id)
         acousticness = track_audio_features.get('acousticness')
         danceability = track_audio_features.get('danceability')
-        instrumentalness = track_audio_features.get('instrumental')
+        instrumentalness = track_audio_features.get('instrumentalness')
         key_signature = track_audio_features.get('key')
         mode = track_audio_features.get('mode')
         tempo = track_audio_features.get('tempo')
