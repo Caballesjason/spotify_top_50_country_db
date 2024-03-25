@@ -16,7 +16,6 @@ Mexico,https://open.spotify.com/playlist/37i9dQZEVXbO3qyFxbkOE1?si=637778a3d60e4
 Germany,https://open.spotify.com/playlist/37i9dQZEVXbJiZcmkrIHGU?si=b084b46a1d9d4a2f
 Brazil,https://open.spotify.com/playlist/37i9dQZEVXbMXbN3EUUhlg?si=86ac211a411b411a
 Argentina,https://open.spotify.com/playlist/37i9dQZEVXbMMy2roB9myp?si=9254115f81594e2e
-Puerto Rico,https://open.spotify.com/playlist/3NJmFR02JQRYIB7COYckSR?si=115dcc51026c4d46
 Chile,https://open.spotify.com/playlist/37i9dQZEVXbL0GavIqMTeb?si=f17be9a38d7746f9
 Australia,https://open.spotify.com/playlist/37i9dQZEVXbJPcfkRz0wJ0?si=fd1664a1be3f4bd6
 Taiwan,https://open.spotify.com/playlist/37i9dQZEVXbMnZEatlMSiu?si=0f9e5574889f40b5
