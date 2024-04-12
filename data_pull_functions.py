@@ -30,15 +30,16 @@ def get_audio_features(sp, tracks: list[str]):
     outputs:
         a dictionary with track IDs as keys and audio features as values
     """
-    if len(tracks) > 100:
-        raise Exception("Too many tracks in 'tracks' argument")
-    else:
-        data = sp.audio_features(tracks)
-        updated_data = {}
-        for feature in data:
-            track_id = feature.pop("id")
-            updated_data.update({track_id:feature})
-        return updated_data
+
+    updated_data = {}
+
+    data = sp.audio_features(tracks)
+        
+        
+    for feature in data:
+        track_id = feature.pop("id")
+        updated_data.update({track_id:feature})
+    return updated_data
     
 
 
@@ -102,8 +103,9 @@ def get_tracks_table_data(sp, playlist_data):
 # Use track_id to pull audio features
     get_ids = lambda tup: tup[0]
     ids = [get_ids(tup) for tup in table_data]
-    audio_features = get_audio_features(sp, ids)
 
+    audio_features = get_audio_features(sp, ids)
+    
 # update each row in table_data
     table_data_length = len(table_data)
     for index in range(table_data_length):
@@ -281,16 +283,33 @@ def get_GenreArtists_table_data(sp, playlist_data):
 
     unique_artist_ids = set(unique_artist_ids)
     unique_artist_ids = list(unique_artist_ids)
+    nbr_of_unique_ids = len(unique_artist_ids)
+    if nbr_of_unique_ids > 50:
+        partition = list_partition(unique_artist_ids, 50)
+        for group in partition:
 
-# artists returns a dictionary with one kvp "artists" containing each artist obj
-    artist_genre_data = sp.artists(unique_artist_ids).get('artists')
+        # artists returns a dictionary with one kvp "artists" containing each artist obj
+            artist_genre_data = sp.artists(group).get('artists')
 
-    for artist_obj in artist_genre_data:
-        artist_id = artist_obj.get('id')
-        genres = artist_obj.get('genres')
-    # create rows for each genre for an artist id
-        rows = [(artist_id, genre) for genre in genres]
-        table_data += rows
+            for artist_obj in artist_genre_data:
+                artist_id = artist_obj.get('id')
+                genres = artist_obj.get('genres')
+            # create rows for each genre for an artist id
+                rows = [(artist_id, genre) for genre in genres]
+                table_data += rows
+        
+        table_data = set(table_data)
+        table_data = list(table_data)
+        return table_data
+    else:
+        artist_genre_data = sp.artists(unique_artist_ids).get('artists')
+
+        for artist_obj in artist_genre_data:
+            artist_id = artist_obj.get('id')
+            genres = artist_obj.get('genres')
+        # create rows for each genre for an artist id
+            rows = [(artist_id, genre) for genre in genres]
+            table_data += rows
     
     table_data = set(table_data)
     table_data = list(table_data)
@@ -325,19 +344,51 @@ def get_Artists_table_data(sp, playlist_data):
 
     unique_artist_ids = set(unique_artist_ids)
     unique_artist_ids = list(unique_artist_ids)
+    nbr_of_unique_ids = len(unique_artist_ids)
+    if nbr_of_unique_ids > 50:
+        partition = list_partition(unique_artist_ids, 50)
+        for group in partition:
+            artist_genre_data = sp.artists(group).get('artists')
 
-# artists returns a dictionary with one kvp "artists" containing each artist obj
-    artist_genre_data = sp.artists(unique_artist_ids).get('artists')
+            for artist_obj in artist_genre_data:
+                artist_id = artist_obj.get('id')
+                artist_name = artist_obj.get('name')
+                nbr_of_followers = artist_obj.get('followers').get('total')
+                popularity = artist_obj.get('popularity')
+            # create rows for each genre for an artist id
+                row = (artist_id, artist_name, nbr_of_followers, popularity)
+                table_data.append(row)
+        
+        table_data = set(table_data)
+        table_data = list(table_data)
+        return table_data
+    else:
 
-    for artist_obj in artist_genre_data:
-        artist_id = artist_obj.get('id')
-        artist_name = artist_obj.get('name')
-        nbr_of_followers = artist_obj.get('followers').get('total')
-        popularity = artist_obj.get('popularity')
-    # create rows for each genre for an artist id
-        row = (artist_id, artist_name, nbr_of_followers, popularity)
-        table_data.append(row)
-    
-    table_data = set(table_data)
-    table_data = list(table_data)
-    return table_data
+    # artists returns a dictionary with one kvp "artists" containing each artist obj
+    # It appears that at most 50 artist can be called at a given time
+        artist_genre_data = sp.artists(unique_artist_ids).get('artists')
+
+        for artist_obj in artist_genre_data:
+            artist_id = artist_obj.get('id')
+            artist_name = artist_obj.get('name')
+            nbr_of_followers = artist_obj.get('followers').get('total')
+            popularity = artist_obj.get('popularity')
+        # create rows for each genre for an artist id
+            row = (artist_id, artist_name, nbr_of_followers, popularity)
+            table_data.append(row)
+        
+        table_data = set(table_data)
+        table_data = list(table_data)
+        return table_data
+
+# Used to partition lists into smaller lists (less than 50 as requests can be longer than 50)
+def list_partition(some_list, size):
+    partition = []
+    if len(some_list) <= size:
+        partition.append(some_list)
+        return(partition)
+    else:
+        partition_one = [some_list[ele] for ele in range(size)]
+        partition.append(partition_one)
+        partition_two = [some_list[ele] for ele in range(size, len(some_list))]
+        return partition + list_partition(partition_two, size)

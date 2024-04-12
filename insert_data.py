@@ -66,7 +66,7 @@ def Tracks_insert(data, conn):
     insert_query = """
     INSERT INTO Tracks (track_id,track_name,album_id,duration_ms,explicit,
     current_popularity,acousticness,danceability,instrumentalness, key_signature,
-    mode,tempo,time_signature,valence) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+    mode,tempo,time_signature,valence) VALUES (?,?,?,?,?,?,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL)
     """
     cur = conn.cursor()
     with conn:
