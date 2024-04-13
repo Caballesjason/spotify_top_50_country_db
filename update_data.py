@@ -9,8 +9,7 @@ from random import randint
 if __name__ == "__main__":
     print('\n---- BEGIN DATA LOAD ----\n')
 # Remove all data
-    tables = ["AlbumArtists", "Albums", "Artists", "GenreArtists", "KeySignatures",
-            "MarketCodes", "Playlists", "TrackArtists", "Tracks"]
+    tables = ["AlbumArtists", "Albums", "Artists", "GenreArtists", "Playlists", "TrackArtists", "Tracks"]
     
 # Connect to db
     conn = uf.create_connection("SpotifyData.db")
@@ -97,7 +96,7 @@ if __name__ == "__main__":
     Playlists_data_master = list(set(Playlists_data_master))
     TrackArtists_data_master = list(set(TrackArtists_data_master))
     TrackAvaliableMarkets_insert = list(set(TrackAvailableMarkets_data_master))
-    
+
 # Upload all data to their tables
     id.AlbumArtists_insert(AlbumArtists_data_master, conn)
     id.Albums_insert(Albums_data_master, conn)
