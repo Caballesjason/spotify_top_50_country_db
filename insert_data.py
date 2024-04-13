@@ -73,3 +73,14 @@ def Tracks_insert(data, conn):
     # to insert data
         cur.executemany(insert_query, data)
         conn.commit()
+
+
+def TrackAvaliableMarkets_insert(data, conn):
+    insert_query = """
+    INSERT INTO TrackAvailableMarkets (track_id, country_code) VALUES (?,?)
+    """
+    cur = conn.cursor()
+    with conn:
+    # to insert data
+        cur.executemany(insert_query, data)
+        conn.commit()

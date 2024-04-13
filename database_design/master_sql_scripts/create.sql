@@ -2,7 +2,7 @@
 CREATE TABLE AlbumArtists(
     album_id VARHCAR(32)
     ,artist_id VARCHAR(32)
-    ,FOREIGN KEY (album_id) REFERENCES Tracks(album_id)
+    ,FOREIGN KEY (album_id) REFERENCES Albums(album_id)
     ,FOREIGN KEY (artist_id) REFERENCES Artists(artist_id)
 );
 
@@ -62,6 +62,14 @@ CREATE TABLE TrackArtists(
     ,artist_id VARCHAR(32)
     ,FOREIGN KEY (track_id) REFERENCES Tracks(track_id)
     ,FOREIGN KEY (artist_id) REFERENCES Artists(artist_id)
+);
+
+-- TrackAvailableMarkets Schema --
+CREATE TABLE TrackAvailableMarkets(
+    track_id VARHCAR(32)
+    ,country_code VARCHAR(32)
+    ,FOREIGN KEY (track_id) REFERENCES Tracks(track_id)
+    ,FOREIGN KEY (country_code) REFERENCES MarketCodes(country_code)
 );
 
 -- Tracks Schema --

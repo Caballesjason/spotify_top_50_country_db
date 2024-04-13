@@ -240,14 +240,13 @@ def get_TrackArtists_table_data(playlist_data):
     return table_data
 
 
-# Requires review for data upload as its currently not in the schema
 def get_TrackAvailableMarkets_table_data(playlist_data):
     """
     Inputs:
         playlist_data: Output of get_playlist_data()
             This is the raw data of a playlist
     Outputs:
-        table_data: These are the rows of for TrackAvailableMarkets
+        table_data:  These are the rows of for TrackAvailableMarkets
     """
 
 # List of items
@@ -256,9 +255,12 @@ def get_TrackAvailableMarkets_table_data(playlist_data):
 # Table Data
     table_data = []
     for item in items:
+
     # Get the track obj
         track = item.get('track')
         track_id = track.get('id')
+        
+    # available_markets is a list of markets track is available in
         available_markets = track.get('available_markets')
         
         for market in available_markets:

@@ -31,6 +31,7 @@ if __name__ == "__main__":
     GenreArtists_data_master = []
     Playlists_data_master = []
     TrackArtists_data_master = []
+    TrackAvailableMarkets_data_master = []
     Tracks_data_master = []
 
 # Read each "Top 50 - COUNTRY"  Playlist and append its data to the correspending master playlists
@@ -73,7 +74,13 @@ if __name__ == "__main__":
         # Grabbing TrackArtists data
             TrackArtists_data = dp.get_TrackArtists_table_data(playlist_raw_data)
             TrackArtists_data_master += TrackArtists_data
-            print('Successfully loaded TrackArtistsdata')
+            print('Successfully loaded TrackArtists data')
+
+        # Grabbing TrackAvailableMarkets data
+            TrackAvailableMarkets_data = dp.get_TrackAvailableMarkets_table_data(playlist_raw_data)
+            TrackAvailableMarkets_data_master += TrackAvailableMarkets_data
+            print('Successfully loaded TrackAvailableMarkets data')
+
 
         # Grabbing Tracks data
             time.sleep(5)
@@ -98,6 +105,7 @@ if __name__ == "__main__":
     id.Playlists_insert(Playlists_data_master, conn)
     id.TrackArtists_insert(TrackArtists_data_master, conn)
     id.Tracks_insert(Tracks_data_master, conn)
+    id.TrackAvaliableMarkets_insert(TrackAvailableMarkets_data_master, conn)
 
     print("\n---- DATA SUCCESSFULLY LOADED ----\n")
 
