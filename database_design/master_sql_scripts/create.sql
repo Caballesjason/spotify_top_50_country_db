@@ -41,7 +41,7 @@ CREATE TABLE KeySignatures(
 -- MarketCodes Schema --
 CREATE TABLE MarketCodes(
     country_code CHAR(2)
-    ,country VARCHAR(32)
+    ,country VARCHAR(64)
     ,PRIMARY KEY (country_code)
 );
 
