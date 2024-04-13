@@ -1,3 +1,4 @@
+-- This data was used to pull information on tracks and what countries they are popular in for a project on Clustering!
 WITH count_track_nbr_of_countries AS(
     SELECT DISTINCT
 	track_id

@@ -6,7 +6,7 @@ from spotipy.oauth2 import SpotifyClientCredentials
 
 def get_spotify_obj():
     '''
-    This function grabs your credential information from a yaml file in the super directory
+    This function grabs your credential information from a yaml file in the super directory.
     It then uses the SpotifyClientCredentials function to get access to the spotify port with
     your login credentials.
     The SpotifyClientCredential is then used in the Spotify object to communicate with the spotify API.

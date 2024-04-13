@@ -1,10 +1,5 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Created on Thu Dec  8 16:08:20 2022
-
-@author: jason
-
 Utility Functions were taking from https://mkzia.github.io/eas503-notes/sql/sql_9_python.html
 """
 

@@ -4,19 +4,21 @@ from spotipy.oauth2 import SpotifyClientCredentials
 
 def get_playlist_data(sp, link):
     """
-    inputs:
+    Inputs:
         sp: A spotify object
         link: url to the spotify playlist
-    outputs:
-        dictionary of two keys (name, followers, items)
-        'name' is the name of the playlist
-        'items' is a list of attributes to upload in playlists 
-        Track objects are one of those attributes
-        Track objects are just dict
+
+    Outputs:
+        playlist_data: dictionary of two keys (name, items)
+            'name' is the name of the playlist
+            'items' is a list of attributes to upload in playlists 
     """
 
+# Take the playlist url and pull its data
     playlist = sp.playlist(link)
     playlist_name = playlist.get('name')
+
+# Pull the track information from the playist
     playlist_items = playlist.get('tracks').get('items')
     playlist_data = {'name': playlist_name, 'items': playlist_items}
     return playlist_data
@@ -24,31 +26,33 @@ def get_playlist_data(sp, link):
 
 def get_audio_features(sp, tracks: list[str]):
     """
-    inputs:
+    Inputs:
         sp: A spotify object
         tracks: A list of spotify track URIs to return audio features for (maximum number of tracks to pull data in one call is 100)
-    outputs:
-        a dictionary with track IDs as keys and audio features as values
+
+    Outputs:
+        data: a dictionary with track IDs as keys and audio features as values
     """
 
     updated_data = {}
 
+# Grab audio features
     data = sp.audio_features(tracks)
-        
-        
+
+#  Update dictionary   
     for feature in data:
         track_id = feature.pop("id")
         updated_data.update({track_id:feature})
     return updated_data
     
 
-
 def get_playlist_table_data(playlist_data):
     """
-    inputs:
+    Inputs:
         playlist_data: Output of get_playlist_data()
             This is the raw data of a playlist
-    outputs:
+
+    Outputs:
         table_data:  These are the rows of for Playlist
     """
 # Name of playlist
@@ -73,12 +77,13 @@ def get_playlist_table_data(playlist_data):
 
 def get_tracks_table_data(sp, playlist_data):
     """
-    inputs:
+    Inputs:
         sp: A spotify object
         playlist_data: Output of get_playlist_data()
             This is the raw data of a playlist
-    outputs:
-        table_data:  These are the rows of for Tracks
+
+    Outputs:
+        table_data:  These are the rows of Tracks
     """
 # List of items
     items = playlist_data.get("items")
@@ -104,9 +109,10 @@ def get_tracks_table_data(sp, playlist_data):
     get_ids = lambda tup: tup[0]
     ids = [get_ids(tup) for tup in table_data]
 
+# Grab audio features to append to other track data
     audio_features = get_audio_features(sp, ids)
     
-# update each row in table_data
+# update each row in table_data with audio features for each track
     table_data_length = len(table_data)
     for index in range(table_data_length):
         row = table_data[index]
@@ -124,26 +130,26 @@ def get_tracks_table_data(sp, playlist_data):
                                     key_signature, mode, tempo, time_signature,
                                     valence)
         updated_row = row + audio_feature_attributes
+    # Update row at index
         table_data[index] = updated_row
     return table_data
 
 
 def get_Albums_table_data(playlist_data):
     """
-    inputs:
+    Inputs:
         playlist_data: Output of get_playlist_data()
             This is the raw data of a playlist
-    outputs:
+    Outputs:
         table_data:  These are the rows of for Albums
     """
 
 # List of items
     items = playlist_data.get("items")
     
-# Table Data
-# table_data is a dict to ensure return of unique album IDs since multiple tracks from an album
-# can be in a playlist
+
     table_data = []
+# A playlist can have multiple tracks from the same album, so we want to ignore repeated albums
     found_albums = set()
     for item in items:
     # Get the track obj
@@ -155,6 +161,7 @@ def get_Albums_table_data(playlist_data):
         date_released = album.get('release_date')
         row = (album_id, album_name, total_tracks, date_released)
         
+    # Avoid already captured albums
         if album_id not in found_albums:
             table_data.append(row)
             found_albums.add(album_id)
@@ -166,10 +173,10 @@ def get_Albums_table_data(playlist_data):
 
 def get_AlbumArtists_table_data(playlist_data):
     """
-    inputs:
+    Inputs:
         playlist_data: Output of get_playlist_data()
             This is the raw data of a playlist
-    outputs:
+    Outputs:
         table_data:  These are the rows of for AlbumArtists
     """
 
@@ -186,21 +193,26 @@ def get_AlbumArtists_table_data(playlist_data):
     
     # artists is a list of artist obj
         artists = album.get('artists')
+
+    # Grab a list of all artist_ids from artists
         artists_ids = [artist.get('id') for artist in artists]
+
         for artist_id in artists_ids:
             row = (album_id, artist_id)
             table_data.append(row)
 
+# To confirm we only capture unique albums!
     table_data = set(table_data)
     table_data = list(table_data)
     return table_data
 
+
 def get_TrackArtists_table_data(playlist_data):
     """
-    inputs:
+    Inputs:
         playlist_data: Output of get_playlist_data()
             This is the raw data of a playlist
-    outputs:
+    Outputs:
         table_data:  These are the rows of for TrackArtists
     """
 
@@ -210,29 +222,32 @@ def get_TrackArtists_table_data(playlist_data):
 # Table Data
     table_data = []
     for item in items:
+
     # Get the track obj
         track = item.get('track')
         track_id = track.get('id')
         
     # artists is a list of artist obj
         artists = track.get('artists')
+
+    # Grab a list of all artist_ids from artists
         artists_ids = [artist.get('id') for artist in artists]
         
         for artist_id in artists_ids:
             row = (track_id, artist_id)
             table_data.append(row)
 
-    table_data = set(table_data)
-    table_data = list(table_data)
     return table_data
 
+
+# Requires review for data upload as its currently not in the schema
 def get_TrackAvailableMarkets_table_data(playlist_data):
     """
-    inputs:
+    Inputs:
         playlist_data: Output of get_playlist_data()
             This is the raw data of a playlist
-    outputs:
-        table_data:  These are the rows of for TrackAvailableMarkets
+    Outputs:
+        table_data: These are the rows of for TrackAvailableMarkets
     """
 
 # List of items
@@ -250,17 +265,16 @@ def get_TrackAvailableMarkets_table_data(playlist_data):
             row = (track_id, market)
             table_data.append(row)
 
-    table_data = set(table_data)
-    table_data = list(table_data)
     return table_data
+
 
 def get_GenreArtists_table_data(sp, playlist_data):
     """
-    inputs:
+    Inputs:
         sp: A spotify object
         playlist_data: Output of get_playlist_data()
         This is the raw data of a playlist
-    outputs:
+    Outputs:
         table_data:  These are the rows of for GenreArtists
     """
 # List of items
@@ -277,51 +291,61 @@ def get_GenreArtists_table_data(sp, playlist_data):
 
     # artists is a list of artist obj
         artists = track.get('artists')
-    # a dictionary of artist ids and their corresponding genres
+
+    # Grab all artists ids
         artist_ids = [artist.get('id') for artist in artists]
         unique_artist_ids += artist_ids
 
+# Make unique_artist_ids list
     unique_artist_ids = set(unique_artist_ids)
     unique_artist_ids = list(unique_artist_ids)
+
+# Grab the total number of unique ids
     nbr_of_unique_ids = len(unique_artist_ids)
+
+# Partition the data if we have more than 50 ids since url can only handle
+# at most 50 ids
     if nbr_of_unique_ids > 50:
+    # partition is a list of lists where each list contain ids
         partition = list_partition(unique_artist_ids, 50)
         for group in partition:
 
-        # artists returns a dictionary with one kvp "artists" containing each artist obj
+        # artist_genre_data returns a dictionary with one kvp "artists" containing
+        # each artist obj
             artist_genre_data = sp.artists(group).get('artists')
 
             for artist_obj in artist_genre_data:
                 artist_id = artist_obj.get('id')
                 genres = artist_obj.get('genres')
+
             # create rows for each genre for an artist id
                 rows = [(artist_id, genre) for genre in genres]
                 table_data += rows
         
-        table_data = set(table_data)
-        table_data = list(table_data)
         return table_data
+    
     else:
+        # artist_genre_data returns a dictionary with one kvp "artists" containing
+        # each artist obj
         artist_genre_data = sp.artists(unique_artist_ids).get('artists')
 
         for artist_obj in artist_genre_data:
             artist_id = artist_obj.get('id')
             genres = artist_obj.get('genres')
+
         # create rows for each genre for an artist id
             rows = [(artist_id, genre) for genre in genres]
             table_data += rows
-    
-    table_data = set(table_data)
-    table_data = list(table_data)
+
     return table_data
 
 def get_Artists_table_data(sp, playlist_data):
     """
-    inputs:
+    Inputs:
         sp: A spotify object
         playlist_data: Output of get_playlist_data()
             This is the raw data of a playlist
-    outputs:
+    Outputs:
         table_data:  These are the rows of for GenreArtists
     """
 # List of items
@@ -342,10 +366,18 @@ def get_Artists_table_data(sp, playlist_data):
         artist_ids = [artist.get('id') for artist in artists]
         unique_artist_ids += artist_ids
 
+# Make unique_artist_ids list
     unique_artist_ids = set(unique_artist_ids)
     unique_artist_ids = list(unique_artist_ids)
+
+# Grab the total number of unique ids
     nbr_of_unique_ids = len(unique_artist_ids)
+
+# Partition the data if we have more than 50 ids since url can only handle
+# at most 50 ids
     if nbr_of_unique_ids > 50:
+
+    # partition is a list of lists where each list contain ids
         partition = list_partition(unique_artist_ids, 50)
         for group in partition:
             artist_genre_data = sp.artists(group).get('artists')
@@ -355,17 +387,15 @@ def get_Artists_table_data(sp, playlist_data):
                 artist_name = artist_obj.get('name')
                 nbr_of_followers = artist_obj.get('followers').get('total')
                 popularity = artist_obj.get('popularity')
+
             # create rows for each genre for an artist id
                 row = (artist_id, artist_name, nbr_of_followers, popularity)
                 table_data.append(row)
-        
-        table_data = set(table_data)
-        table_data = list(table_data)
         return table_data
     else:
 
-    # artists returns a dictionary with one kvp "artists" containing each artist obj
-    # It appears that at most 50 artist can be called at a given time
+    # artist_genre_data returns a dictionary with one kvp "artists" containing
+    # each artist obj
         artist_genre_data = sp.artists(unique_artist_ids).get('artists')
 
         for artist_obj in artist_genre_data:
@@ -373,20 +403,29 @@ def get_Artists_table_data(sp, playlist_data):
             artist_name = artist_obj.get('name')
             nbr_of_followers = artist_obj.get('followers').get('total')
             popularity = artist_obj.get('popularity')
+
         # create rows for each genre for an artist id
             row = (artist_id, artist_name, nbr_of_followers, popularity)
             table_data.append(row)
-        
-        table_data = set(table_data)
-        table_data = list(table_data)
+
         return table_data
 
 # Used to partition lists into smaller lists (less than 50 as requests can be longer than 50)
 def list_partition(some_list, size):
+    """
+        Inputs:
+            some_list: A list containing some elements
+            size: The desired size you want for a list
+        Outputs:
+            partition: If the size of some_list is too large, return a list of lists
+                containing elements divided into each list
+    """
+# Initialize partition
     partition = []
+# If the number of elements are greater than size partition data!
     if len(some_list) <= size:
         partition.append(some_list)
-        return(partition)
+        return partition
     else:
         partition_one = [some_list[ele] for ele in range(size)]
         partition.append(partition_one)

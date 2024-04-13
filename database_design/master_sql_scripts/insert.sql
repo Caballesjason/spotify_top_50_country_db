@@ -1,4 +1,4 @@
---INSERT KeySignatures Data--
+-- INSERT KeySignatures Data --
 INSERT INTO KeySignatures (key_id, key_signature) VALUES
     (-1, "No Key")
     ,(0, "C")
@@ -14,7 +14,7 @@ INSERT INTO KeySignatures (key_id, key_signature) VALUES
     ,(10, "A Sharp or B Flat")
     ,(11, "B");
 
---INSERT MarketCodes Data--
+-- INSERT MarketCodes Data --
 INSERT INTO MarketCodes (country_code, country) VALUES
 ("AD", "Andorra")
 ,("AE", "United Arab Emirates")
