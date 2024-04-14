@@ -14,8 +14,11 @@ Here are the following wiki pages:
 # Data Dictionary
 ## Artists
 `artist_id` __(PRIMARY KEY)__ - The unique ID for an Artist
+
 `artist_name` - The name of the artist
+
 `nbr_of_followers` - The number of people currently following the artist
+
 `popularity` -  The popularity of the artist. The value will be between 0 and 100, with 100 being the most popular. The artist's popularity is calculated from the popularity of all the artist's tracks.
 
 ## Tracks
@@ -52,41 +55,54 @@ __Note:__ The popularity value may lag actual popularity by a few days: the valu
 
 ## Albums
 `album_id` __(PRIMARY KEY)__ - The ID for a album
+
 `album_name` - The name for an album
+
 `total_tracks` - The number of tracks in the album
+
 `date_released` - The date the album is released.  If no month or day for the release date can be provided, the Spotify API gives only the year.
 
 
 ## AlbumArtists
 `album_id` __(FOREIGN KEY)__ - The ID for an album
+
 `artist_id` __(FOREIGN KEY)__ -  The ID for an artist
 
 
 ## GenreArtists
 `artist_id` __(FOREIGN KEY)__ - The ID for an artist
+
 `genre` - The genre that the artist is categorized as
 
 
 ## KeySignatures
 `key_id` __(PRIMARY KEY)__ - The ID for a key signature
+
 `key_signature` - The actual key signature
 
 ## MarketCodes
 `country_code` __(PRIMARY KEY)__ - A two character country code
+
 `country` - The name of a country
 
 ## Playlists
 `name` - The name of the playlist we pulled a track from 
+
 `track_id` __(FOREIGN KEY)__ - The ID of the track
+
 `track_name` - The name of the track
+
 `album_id` __(FOREIGN KEY)__ - The album ID of the track
+
 `album_name` - The album name of the track
 
 
 ## TrackArtists
 `track_id` __(FOREIGN KEY)__ - The ID of a track
+
 `artist_id` __(FOREIGN KEY)__ - The ID of an artist 
 
 ## TrackAvailableMarkets
 `track_id` __(FOREIGN KEY)__ - The ID of a track
+
 `country_code` - The country code of where a track is available
