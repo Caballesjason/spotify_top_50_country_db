@@ -108,7 +108,7 @@ if __name__ == "__main__":
 
 
         # Grabbing Tracks data
-            time.sleep(5)
+            # time.sleep(5)
             Tracks_data = dp.get_tracks_table_data(sp, playlist_raw_data)
             Tracks_data_master += Tracks_data
             print('Successfully loaded Tracks data\n\n')

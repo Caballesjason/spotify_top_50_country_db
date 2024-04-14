@@ -7,14 +7,14 @@ Click [here](https://dbdiagram.io/d/65dbdc3f5cd0412774c6ba17) and upload the bel
 Table Playlists {
     name VARCHAR(32) // playlist.name [A]
     track_id VARCHAR(32) // playlist.tracks.items.track.id [A]
-    track_name VARCHAR(32) // playlist.tracks.items.track.name [A]
+    track_name VARCHAR // playlist.tracks.items.track.name [A]
     album_id VARCHAR(32) // playlist.tracks.items.track.album.id [A]
-    album_name VARCHAR(32) // playlist.tracks.items.track.album.name [A]
+    album_name VARCHAR // playlist.tracks.items.track.album.name [A]
 }
 
 Table Tracks {
     track_id VARCHAR(32) [PRIMARY KEY] // playlist.tracks.items.track.id [A]
-    track_name VARCHAR(32) // playlist.tracks.items.track.name [A]
+    track_name VARCHAR // playlist.tracks.items.track.name [A]
     album_id VARCHAR(32) // playlist.tracks.items.track.album.id [A]
     duration_ms INTEGER // playlist.tracks.items.track.duration_ms [A]
     explicit BOOLEAN // playlist.tracks.items.track.explicit [A]
@@ -31,7 +31,7 @@ Table Tracks {
 
 Table Albums {
     album_id VARCHAR(32) [PRIMARY KEY]  // playlist.tracks.items.track.album.id [A]
-    album_name VARCHAR(32)  // playlist.tracks.items.track.album.name [A]
+    album_name VARCHAR  // playlist.tracks.items.track.album.name [A]
     total_tracks INTEGER // playlist.tracks.items.track.album.total_tracks [A]
     date_released DATE // YYYY-MM playlist.tracks.items.track.album.release_date [A]
 
@@ -40,7 +40,7 @@ Table Albums {
 
 Table Artists {
   artist_id VARCHAR(32) [PRIMARY KEY] // playlist.tracks.items.track.artists.id [A]
-  artist_name VARCHAR(32) // playlist.tracks.items.track.artists.name [A]
+  artist_name VARCHAR // playlist.tracks.items.track.artists.name [A]
   nbr_of_followers INTEGER // playlist.tracks.items.track.artists.followers.total [A]
   popularity INTEGER // playlist.tracks.items.track.artists.popularity [A]
 }
