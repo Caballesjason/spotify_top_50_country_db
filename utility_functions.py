@@ -13,7 +13,8 @@ def create_connection(db_file):
         conn = sqlite3.connect(db_file)
     except Error as e:
         print(e)
-
+        
+    print('---- Successfully connected to SQLite ----\n')
     return conn
 
 

@@ -356,17 +356,36 @@ def get_Artists_table_data(sp, playlist_data):
 # Table Data
     table_data = []
 
-# Grab all unique artist ids to get their genre later
-    unique_artist_ids = []
+# List of unique album ids
+    album_ids = []
+
     for item in items:
     # Get the track obj
         track = item.get('track')
+    # Get the album
+        album = track.get('album')
+    # Get the album id
+        album_id = album.get('id')
 
-    # artists is a list of artist obj
-        artists = track.get('artists')
-    # a dictionary of artist ids and their corresponding genres
-        artist_ids = [artist.get('id') for artist in artists]
-        unique_artist_ids += artist_ids
+        album_ids.append(album_id)
+
+# get all unique album_ids
+    album_ids = list(set(album_ids))
+
+# get all album objects
+    albums = sp.albums(album_ids)
+
+    artist_lists = [album.get('artists') for album in albums]
+    artist_objs = []
+
+# add all artist objects into one list
+    for artist_list in artist_lists:
+        artist_objs += artist_list
+    
+    
+# a dictionary of artist ids and their corresponding genres
+    artists = [artist.get('id') for artist in artist_objs]
+    unique_artist_ids = list(set(artists))
 
 # Make unique_artist_ids list
     unique_artist_ids = set(unique_artist_ids)
