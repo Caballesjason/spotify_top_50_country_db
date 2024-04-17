@@ -2,7 +2,7 @@
 Our team __SeaQewL__ have used the following as data sources.
 
 ## Spotify API
-Our team music data from the [Spotify API](https://developer.spotify.com/documentation/web-api).  This API allows us to pull music data that is available in Spotify's application.  The spotify API also utilizes data for market codes and musical key signatrue encodings.  The API's documentation provides wiki pages to show how they source the data for market codes and key signature encodings and we also use the data from those wiki pages as well!
+Our team uses music data from the [Spotify API](https://developer.spotify.com/documentation/web-api). This API allows us to pull music data that is available in Spotify's application. The spotify API also utilizes data for market codes and musical key signatrue encodings. The API's documentation provides wiki pages to show how they source the data for market codes and key signature encodings and we also use the data from those wiki pages as well!
 
 Here are the following wiki pages:
 
