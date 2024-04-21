@@ -7,6 +7,7 @@ import time
 from random import randint
 from scripts.connect import connect
 from scripts.config import load_config
+from scripts.create_schemas import get_sql_schema_string
 
 if __name__ == "__main__":
     print('\n---- BEGIN DATA LOAD ----\n')
@@ -31,8 +32,8 @@ if __name__ == "__main__":
 # Delete data from PostgreSQL server
     with postgres_conn:
         for table in tables:
-            test_query = f"DELETE FROM {table}"
-            postgres_cur.execute(test_query)
+            schema_initalization = get_sql_schema_string()
+            postgres_cur.execute(schema_initalization)
     print('---- Successfully deleted data from PostgreSQL Server ----\n')
     
 
