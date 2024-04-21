@@ -121,6 +121,8 @@ def get_tracks_table_data(sp, playlist_data):
         row = table_data[index]
         track_id = row[0]
         track_audio_features = audio_features.get(track_id)
+    # audio_features returns [None] if audio features are unavailable
+    # This conditional statement handles this to return NULL in DBs
         if isinstance(track_audio_features, dict):
             acousticness = track_audio_features.get('acousticness')
             danceability = track_audio_features.get('danceability')
