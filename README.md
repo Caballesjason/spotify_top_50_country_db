@@ -1,4 +1,4 @@
-# Data Sources
+# Group One 
 Our team __SeaQewL__ have used the following as data sources.
 
 ## Spotify API
