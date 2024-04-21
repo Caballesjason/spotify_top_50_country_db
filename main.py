@@ -23,9 +23,9 @@ if __name__ == "__main__":
     postgres_cur = postgres_conn.cursor()
     
 
-# Connect to SQLite db
-    conn = uf.create_connection("SpotifyData.db")
-    cur = conn.cursor()
+# # Connect to SQLite db
+#     conn = uf.create_connection("SpotifyData.db")
+#     cur = conn.cursor()
     
 
 # Delete data from PostgreSQL server
@@ -36,12 +36,12 @@ if __name__ == "__main__":
     print('---- Successfully deleted data from PostgreSQL Server ----\n')
     
 
-# Delete data from SQLite tables
-    with conn:
-        for table in tables:
-            delete_data_from_tables_query = f"DELETE from {table};"
-            cur.execute(delete_data_from_tables_query)
-    print('---- Successfully deleted data from SQLite ----\n')
+# # Delete data from SQLite tables
+#     with conn:
+#         for table in tables:
+#             delete_data_from_tables_query = f"DELETE from {table};"
+#             cur.execute(delete_data_from_tables_query)
+#     print('---- Successfully deleted data from SQLite ----\n')
 
 
 # Get Spotify Object
@@ -135,15 +135,15 @@ if __name__ == "__main__":
     id.TrackAvaliableMarkets_insert(TrackAvailableMarkets_data_master, postgres_conn, postgres=True)
     id.GenreArtists_insert(GenreArtists_data_master, postgres_conn, postgres=True)
 
-# Upload all data to their tables on SQLite
-    id.AlbumArtists_insert(AlbumArtists_data_master, conn, postgres=False)
-    id.Albums_insert(Albums_data_master, conn, postgres=False)
-    id.Artists_insert(Artists_data_master, conn, postgres=False)
-    id.GenreArtists_insert(GenreArtists_data_master, conn, postgres=False)
-    id.Playlists_insert(Playlists_data_master, conn, postgres=False)
-    id.TrackArtists_insert(TrackArtists_data_master, conn, postgres=False)
-    id.Tracks_insert(Tracks_data_master, conn, postgres=False)
-    id.TrackAvaliableMarkets_insert(TrackAvailableMarkets_data_master, conn, postgres=False)
+# # Upload all data to their tables on SQLite
+#     id.AlbumArtists_insert(AlbumArtists_data_master, conn, postgres=False)
+#     id.Albums_insert(Albums_data_master, conn, postgres=False)
+#     id.Artists_insert(Artists_data_master, conn, postgres=False)
+#     id.GenreArtists_insert(GenreArtists_data_master, conn, postgres=False)
+#     id.Playlists_insert(Playlists_data_master, conn, postgres=False)
+#     id.TrackArtists_insert(TrackArtists_data_master, conn, postgres=False)
+#     id.Tracks_insert(Tracks_data_master, conn, postgres=False)
+#     id.TrackAvaliableMarkets_insert(TrackAvailableMarkets_data_master, conn, postgres=False)
 
 
     print("\n---- DATA SUCCESSFULLY LOADED ----\n")
