@@ -1,4 +1,12 @@
 -- ranks artists for every year
-
-select artist_name, year,popularity, rank() over (partition by year order by popularity desc) popularity_rank from
-(select *, SUBSTRING(date_released, 1, POSITION('-' IN date_released) - 1) year from AlbumArtists join Albums on AlbumArtists.album_id=Albums.album_id join Artists on AlbumArtists.artist_id=Artists.artist_id group by artist_name,year) as album_join_artist
+SELECT DISTINCT artist_name, 
+	year,
+	popularity,
+	DENSE_RANK() OVER(PARTITION BY YEAR ORDER BY popularity DESC) AS popularity_rank
+FROM (SELECT *
+	  ,LEFT(ALBUMS.date_released, 4) AS year
+	  FROM AlbumArtists
+	  JOIN Albums ON AlbumArtists.album_id=Albums.album_id
+	  JOIN Artists ON AlbumArtists.artist_id=Artists.artist_id
+	  ) AS album_join_artist
+ORDER BY YEAR DESC, popularity_RANK

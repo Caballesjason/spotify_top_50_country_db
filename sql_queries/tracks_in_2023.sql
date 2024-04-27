@@ -3,5 +3,5 @@ SELECT *
 FROM tracks
 JOIN albums
 	ON tracks.album_id=albums.album_id
-WHERE LEFT(ALBUMS.date_released, 4)= '2023'
+WHERE LEFT(ALBUMS.date_released, 4) = '2023'
 
