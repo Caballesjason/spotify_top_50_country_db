@@ -125,6 +125,16 @@ if __name__ == "__main__":
     TrackArtists_data_master = list(set(TrackArtists_data_master))
     TrackAvaliableMarkets_insert = list(set(TrackAvailableMarkets_data_master))
 
+# Make sure if rows are distinct
+# Initialize lists for to populate data from Spotify API
+    AlbumArtists_data_master = list(set(AlbumArtists_data_master))
+    Albums_data_master = list(set(Albums_data_master))
+    Artists_data_master = list(set(Artists_data_master))
+    GenreArtists_data_master = list(set(GenreArtists_data_master))
+    Playlists_data_master = list(set(Playlists_data_master))
+    TrackArtists_data_master = list(set(TrackArtists_data_master))
+    TrackAvailableMarkets_data_master = list(set(TrackAvailableMarkets_data_master))
+    Tracks_data_master = list(set(Tracks_data_master))
 
 # Upload all data to their tables on postgreSQL server
     id.Artists_insert(Artists_data_master, postgres_conn, postgres=True)
