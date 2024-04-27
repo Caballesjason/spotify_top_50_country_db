@@ -1,7 +1,3 @@
-Click [here](https://dbdiagram.io/d/65dbdc3f5cd0412774c6ba17) and upload the below text to get the E/L diagram!
-
-
-```
 // [A] - Atomic value in spotify API
 // [NA] - Non-Atomic value in spotify API
 Table Playlists {
@@ -30,16 +26,16 @@ Table Tracks {
 }
 
 Table Albums {
-    album_id VARCHAR(32) [PRIMARY KEY]  // playlist.tracks.items.track.album.id [A]
+    album_id VARCHAR [PRIMARY KEY]  // playlist.tracks.items.track.album.id [A]
     album_name VARCHAR  // playlist.tracks.items.track.album.name [A]
     total_tracks INTEGER // playlist.tracks.items.track.album.total_tracks [A]
-    date_released DATE // YYYY-MM playlist.tracks.items.track.album.release_date [A]
+    date_released VARCHAR // YYYY-MM playlist.tracks.items.track.album.release_date [A]
 
 }
 
 
 Table Artists {
-  artist_id VARCHAR(32) [PRIMARY KEY] // playlist.tracks.items.track.artists.id [A]
+  artist_id VARCHAR [PRIMARY KEY] // playlist.tracks.items.track.artists.id [A]
   artist_name VARCHAR // playlist.tracks.items.track.artists.name [A]
   nbr_of_followers INTEGER // playlist.tracks.items.track.artists.followers.total [A]
   popularity INTEGER // playlist.tracks.items.track.artists.popularity [A]
@@ -67,7 +63,7 @@ Table TrackAvailableMarkets {
 
 Table MarketCodes {
   country_code CHAR(2) [PRIMARY KEY] // wikipedia (see spotify API)
-  country VARCHAR(32) // wikipedia (see spotify API)
+  country VARCHAR // wikipedia (see spotify API)
 }
 
 Table KeySignatures {
@@ -91,4 +87,3 @@ ref: TrackAvailableMarkets.track_id > Tracks.track_id
 ref: TrackAvailableMarkets.country_code > MarketCodes.country_code
 
 ref: GenresArtists.artist_id > Artists.artist_id
-```
