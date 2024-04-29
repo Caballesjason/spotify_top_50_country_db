@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.15)  29 APR 2024 17:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.15)  29 APR 2024 17:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -274,8 +274,7 @@ Package: cuted 2021/10/04 v2.0 Mixing onecolumn and twocolumn modes
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count291
 \l__pdf_internal_box=\box64
-)
-No file "Report - Team SeaQewl".aux.
+) (build/Report - Team SeaQewl.aux)
 \openout1 = `"Report - Team SeaQewl.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
@@ -292,6 +291,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
+
 -- Lines per column: 56 (exact).
 (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -313,35 +313,11 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \c@lstlisting=\count298
-
-
-LaTeX Warning: Citation `b1' on page 1 undefined on input line 45.
-
-
-LaTeX Warning: Citation `b1' on page 1 undefined on input line 47.
-
-
-LaTeX Warning: Citation `b1' on page 1 undefined on input line 56.
-
-
-LaTeX Warning: File `el_diagram.png' not found on input line 65.
-
-
-/Users/jason/Desktop/MSDS/CSE_560/termProject/pdfs/report/Report - Team SeaQewl.tex:65: Package pdftex.def Error: File `el_diagram.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.65 ...graphics[width=\linewidth]{el_diagram.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 65.
-(/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
+</Users/jason/Desktop/MSDS/CSE_560/termProject/database_design/el_diagrams/el_diagram.png, id=1, 3008.23875pt x 1192.455pt>
+File: /Users/jason/Desktop/MSDS/CSE_560/termProject/database_design/el_diagrams/el_diagram.png Graphic file (type png)
+<use /Users/jason/Desktop/MSDS/CSE_560/termProject/database_design/el_diagrams/el_diagram.png>
+Package pdftex.def Info: /Users/jason/Desktop/MSDS/CSE_560/termProject/database_design/el_diagrams/el_diagram.png  used on input line 65.
+(pdftex.def)             Requested size: 516.0pt x 204.53421pt.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 73.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -392,7 +368,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 77--79
 [1{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 
-] [2]
+]
 Underfull \hbox (badness 1769) in paragraph at lines 82--84
 []\OT1/ptm/m/n/10 This ta-ble store in-for-ma-tion re-gard-ing artists fea-tures
  []
@@ -637,8 +613,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 122--124
 \OT1/ptm/m/n/10 In-stru-men-tal-ness, KeySig-na-ture, Mode, Temp0,
  []
 
-(/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
+[2 </Users/jason/Desktop/MSDS/CSE_560/termProject/database_design/el_diagrams/el_diagram.png>] (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 139.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 Overfull \hbox (42.00299pt too wide) in paragraph at lines 161--162
 [][][][][][][][][][][][][][][] 
@@ -649,7 +629,7 @@ Overfull \hbox (48.00305pt too wide) in paragraph at lines 162--163
 [][][][][][][][][][][][][][][] 
  []
 
-[3]
+
 Overfull \hbox (24.0028pt too wide) in paragraph at lines 176--177
 [][][][][][][][][][][][][][][] 
  []
@@ -674,6 +654,7 @@ Overfull \hbox (12.00269pt too wide) in paragraph at lines 271--272
 [][][][][][][][][][][][][][][] 
  []
 
+[3]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -685,27 +666,22 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[4] (build/Report - Team SeaQewl.aux)
+[4
 
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+] (build/Report - Team SeaQewl.aux) ) 
 Here is how much of TeX's memory you used:
- 6256 strings out of 476025
- 94232 string characters out of 5790017
- 1933388 words of memory out of 5000000
- 26641 multiletter control sequences out of 15000+600000
+ 6224 strings out of 476025
+ 94190 string characters out of 5790017
+ 1928388 words of memory out of 5000000
+ 26618 multiletter control sequences out of 15000+600000
  546586 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,8n,62p,1050b,1598s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,8n,62p,1041b,1600s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "build/Report - Team SeaQewl.pdf" (4 pages, 111962 bytes).
+Output written on "build/Report - Team SeaQewl.pdf" (4 pages, 219095 bytes).
 PDF statistics:
- 53 PDF objects out of 1000 (max. 8388607)
- 32 compressed objects within 1 object stream
+ 56 PDF objects out of 1000 (max. 8388607)
+ 33 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
