@@ -99,4 +99,3 @@ CREATE TABLE TrackAvailableMarkets(
     ,FOREIGN KEY (track_id) REFERENCES Tracks(track_id)
     ,FOREIGN KEY (country_code) REFERENCES MarketCodes(country_code)
 );
-

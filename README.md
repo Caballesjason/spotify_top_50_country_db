@@ -1,4 +1,6 @@
 # Spotify Top 50 Country Playlists Database Design
+## Deliverables
+All deliverable as per the project documentation is in the directory `deliverables`
 ## Motivation
 [Spotify](https://open.spotify.com/) generates a variety of playlists that their users can listen to.  This database stores information on the top 50 songs of 67 countries. Spotify creates their own playlists for the top 50 most popular songs,  and this database stores information on 67 different countries and their most popular songs.   This would allow researchers to understand what kind of musical characteristics countries like listening to.
 
@@ -33,3 +35,16 @@ In the `credential_example_files` directory, create a copy of both files (`datab
 
 #### Populating the Database
 To populate the database, just simply run `main`!
+
+### Directory Descriptions
+`credential_example_files` - This directory contains the sample config files to access the spotify API and your local postgreSQL via python!
+
+`database_design` - This directory contains the EL diagram and  `create.sql`, `drop.sql`, and `insert.sql`.  It also contains `all.sql`, which is used to to create, drop, and insert data when our scripts run.
+
+`deliverables` - This directory contains all files required for our report
+
+`pdfs` - This directory contains our data dictionary, report documentaiton, and a copy of our project report.
+
+`scripts` - This directory contains all scripts used to pull out data from the Spotify API.
+
+`sql_queries` - This directory the 9 sql queries requested for the project
