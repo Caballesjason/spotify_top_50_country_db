@@ -1,7 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1714427097 "/Users/jason/Desktop/MSDS/CSE_560/termProject/pdfs/report/Report - Team SeaQewl.tex" "build/Report - Team SeaQewl.pdf" "Report - Team SeaQewl" 1714427097 0
-  "/Users/jason/Desktop/MSDS/CSE_560/termProject/database_design/el_diagrams/el_diagram.png" 1714246288 222550 9287cbda149b4a751acb18dc93e40a39 ""
-  "/Users/jason/Desktop/MSDS/CSE_560/termProject/pdfs/report/Report - Team SeaQewl.tex" 1714427096 15442 0ffa7985e809c0cf5311883e4e666a9b ""
+["pdflatex"] 1714442535 "/Users/jason/Desktop/MSDS/CSE_560/termProject/pdfs/report/Milestone2.tex" "build/Milestone2.pdf" "Milestone2" 1714442536 0
+  "/Users/jason/Desktop/MSDS/CSE_560/termProject/pdfs/report/Milestone2.tex" 1714442535 21368 3ffd166272e508442723f622569d4976 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/courier/pcrb7t.tfm" 1136768653 960 4ab65358b8406f30ef5496c8c096d22b ""
@@ -61,7 +60,6 @@
   "/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty" 1654720880 2671 7e67d78d9b88c845599a85b2d41f2e39 ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/mathcolor.ltx" 1667332637 2885 9c645d672ae17285bba324998918efd8 ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/trig.sty" 1654720880 4023 293ea1c16429fc0c4cf605f4da1791a9 ""
-  "/usr/local/texlive/2023/texmf-dist/tex/latex/ieeetran/IEEEtran.cls" 1440712899 281957 5b2e4fa15b0f7eabb840ebf67df4c0f7 ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def" 1673989714 30429 213676d4c7327a21d91ddaed900e7b81 ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg" 1279039959 678 4792914a8f45be57bb98413425e4c7af ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/listings/listings.cfg" 1677530001 1829 d8258b7d94f5f955e70c623e525f9f45 ""
@@ -76,10 +74,14 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1681574699 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1681574644 7883455 d014f38cdb6960f79417fab285bcb707 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "Report - Team SeaQewl.tex" 1714427096 15442 0ffa7985e809c0cf5311883e4e666a9b ""
-  "build/Report - Team SeaQewl.aux" 1714427097 1753 a40ed144d9fe8dae1f73f23e1865084d "pdflatex"
+  "IEEEtran.cls" 1714455700 281957 5b2e4fa15b0f7eabb840ebf67df4c0f7 ""
+  "Milestone2.tex" 1714442535 21368 3ffd166272e508442723f622569d4976 ""
+  "build/Milestone2.aux" 1714442536 2078 02ee85950d63b0548db9393b7f88865b "pdflatex"
+  "el_diagram.png" 1714455700 222550 9287cbda149b4a751acb18dc93e40a39 ""
+  "explain.png" 1714455700 220253 b5ac10f73484663dfe61cb4173395e2d ""
+  "explain2.png" 1714455700 391852 7cfdab830dcb044dbbea6b11b4134ff7 ""
   (generated)
-  "build/Report - Team SeaQewl.aux"
-  "build/Report - Team SeaQewl.log"
-  "build/Report - Team SeaQewl.pdf"
+  "build/Milestone2.aux"
+  "build/Milestone2.log"
+  "build/Milestone2.pdf"
   (rewritten before read)

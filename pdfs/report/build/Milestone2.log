@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.15)  29 APR 2024 17:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.15)  29 APR 2024 22:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/jason/Desktop/MSDS/CSE_560/termProject/pdfs/report/Report - Team SeaQewl.tex"
-(/Users/jason/Desktop/MSDS/CSE_560/termProject/pdfs/report/Report - Team SeaQewl.tex
+**/Users/jason/Desktop/MSDS/CSE_560/termProject/pdfs/report/Milestone2.tex
+(/Users/jason/Desktop/MSDS/CSE_560/termProject/pdfs/report/Milestone2.tex
 LaTeX2e <2022-11-01> patch level 1
-L3 programming layer <2023-02-22> (/usr/local/texlive/2023/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
+L3 programming layer <2023-02-22> (./IEEEtran.cls
 Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
 -- http://www.michaelshell.org/tex/ieeetran/
@@ -274,8 +274,8 @@ Package: cuted 2021/10/04 v2.0 Mixing onecolumn and twocolumn modes
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count291
 \l__pdf_internal_box=\box64
-) (build/Report - Team SeaQewl.aux)
-\openout1 = `"Report - Team SeaQewl.aux"'.
+) (build/Milestone2.aux)
+\openout1 = `Milestone2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
@@ -313,10 +313,10 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \c@lstlisting=\count298
-</Users/jason/Desktop/MSDS/CSE_560/termProject/database_design/el_diagrams/el_diagram.png, id=1, 3008.23875pt x 1192.455pt>
-File: /Users/jason/Desktop/MSDS/CSE_560/termProject/database_design/el_diagrams/el_diagram.png Graphic file (type png)
-<use /Users/jason/Desktop/MSDS/CSE_560/termProject/database_design/el_diagrams/el_diagram.png>
-Package pdftex.def Info: /Users/jason/Desktop/MSDS/CSE_560/termProject/database_design/el_diagrams/el_diagram.png  used on input line 65.
+<el_diagram.png, id=1, 3008.23875pt x 1192.455pt>
+File: el_diagram.png Graphic file (type png)
+<use el_diagram.png>
+Package pdftex.def Info: el_diagram.png  used on input line 65.
 (pdftex.def)             Requested size: 516.0pt x 204.53421pt.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 73.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -350,7 +350,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--74
 
  []
 
+[1{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
+
+]
 Underfull \hbox (badness 10000) in paragraph at lines 77--79
 
  []
@@ -365,10 +368,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 77--79
 
  []
 
-[1{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
-
-]
 Underfull \hbox (badness 1769) in paragraph at lines 82--84
 []\OT1/ptm/m/n/10 This ta-ble store in-for-ma-tion re-gard-ing artists fea-tures
  []
@@ -558,7 +558,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 111--113
 
  []
 
-
+[2 <./el_diagram.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 116--118
 []\OT1/ptm/m/n/10 This ta-ble stores the in-for-ma-tion of tracks and
  []
@@ -613,48 +613,217 @@ Underfull \hbox (badness 10000) in paragraph at lines 122--124
 \OT1/ptm/m/n/10 In-stru-men-tal-ness, KeySig-na-ture, Mode, Temp0,
  []
 
-[2 </Users/jason/Desktop/MSDS/CSE_560/termProject/database_design/el_diagrams/el_diagram.png>] (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
+
+Underfull \hbox (badness 8038) in paragraph at lines 132--133
+[]\OT1/ptm/m/n/10 This query can be used to es-tab-lish a base-line
+ []
+
+
+Underfull \hbox (badness 7649) in paragraph at lines 132--133
+\OT1/ptm/m/n/10 for num-ber of fol-low-ers per artist for each genre
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
+\OT1/ptm/m/n/10 fea-tur-ing in the Top 50 Charts across the globe.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
+
+ []
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 139.
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 141.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Overfull \hbox (42.00299pt too wide) in paragraph at lines 161--162
+Underfull \hbox (badness 5022) in paragraph at lines 151--152
+\OT1/ptm/m/n/10 anal-yse the reach of dif-fer-ent forms of mu-sic with
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
+\OT1/ptm/m/n/10 re-spect to the num-ber of coun-tries tracks where
+ []
+
+
+Underfull \hbox (badness 4193) in paragraph at lines 151--152
+\OT1/ptm/m/n/10 they are charted. It can be cru-cial in un-der-stand-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
+\OT1/ptm/m/n/10 the mu-sic tastes of peo-ple around the globe.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
+
+ []
+
+
+Overfull \hbox (42.00299pt too wide) in paragraph at lines 165--166
 [][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (48.00305pt too wide) in paragraph at lines 162--163
+Overfull \hbox (48.00305pt too wide) in paragraph at lines 166--167
 [][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (24.0028pt too wide) in paragraph at lines 176--177
+Underfull \hbox (badness 10000) in paragraph at lines 172--173
+
+ []
+
+
+Overfull \hbox (24.0028pt too wide) in paragraph at lines 182--183
 [][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (12.00269pt too wide) in paragraph at lines 177--178
+Overfull \hbox (12.00269pt too wide) in paragraph at lines 183--184
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (30.00287pt too wide) in paragraph at lines 200--201
+Underfull \hbox (badness 10000) in paragraph at lines 188--189
+[]\OT1/ptm/m/n/10 These type of queries can help re-searchers
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--189
+\OT1/ptm/m/n/10 and an-a-lyst un-der-stand and fig-ure out the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--189
+\OT1/ptm/m/n/10 impact-full artists as well as al-bums per year.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--189
+
+ []
+
+
+Overfull \hbox (30.00287pt too wide) in paragraph at lines 208--209
 [][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (6.00262pt too wide) in paragraph at lines 253--254
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
+[]\OT1/ptm/m/n/10 This query is sim-i-lar to the pre-vi-ous query
+ []
+
+
+Underfull \hbox (badness 7064) in paragraph at lines 219--220
+\OT1/ptm/m/n/10 in the sense that it too can be used to an-a-lyze
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
+\OT1/ptm/m/n/10 the imapct-full-ness of artists over the year.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 248--249
+
+ []
+
+
+Overfull \hbox (6.00262pt too wide) in paragraph at lines 265--266
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (12.00269pt too wide) in paragraph at lines 271--272
+Underfull \hbox (badness 2401) in paragraph at lines 271--272
+\OT1/ptm/m/n/10 use to mu-sic con-nois-seurs, re-searchers, and stu-dios in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 271--272
+
+ []
+
+
+Overfull \hbox (12.00269pt too wide) in paragraph at lines 285--286
 [][][][][][][][][][][][][][][] 
  []
 
-[3]
+
+Underfull \hbox (badness 3724) in paragraph at lines 311--312
+\OT1/ptm/m/n/10 be-tween au-di-ence pref-er-ence and length of the song.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
+
+ []
+
+
+Underfull \hbox (badness 1910) in paragraph at lines 336--337
+\OT1/ptm/m/n/10 mu-sic en-thu-si-asts an-a-lyze the trends in mu-sic in-dus-try
+ []
+
+
+Underfull \hbox (badness 2269) in paragraph at lines 336--337
+\OT1/ptm/m/n/10 artists, and pro-duc-tion stu-dios. These queries can also
+ []
+
+<explain.png, id=22, 1106.1325pt x 537.00626pt>
+File: explain.png Graphic file (type png)
+<use explain.png>
+Package pdftex.def Info: explain.png  used on input line 341.
+(pdftex.def)             Requested size: 453.51726pt x 220.17398pt.
+<explain2.png, id=23, 1119.18124pt x 561.09625pt>
+File: explain2.png Graphic file (type png)
+<use explain2.png>
+Package pdftex.def Info: explain2.png  used on input line 342.
+(pdftex.def)             Requested size: 447.66457pt x 224.43452pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 341--343
+[][]
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 361--362
+[]\OT1/ptm/m/n/8 F. Zandt, \In-fo-graphic: The Shorter the Song, the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 361--362
+\OT1/ptm/m/n/8 Sweeter the Stream?," Statista In-fo-graph-ics, Jan. 07, 2022.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 361--362
+\OT1/ptm/m/n/8 https://www.statista.com/chart/26546/mean-song-duration-of-currently-
+ []
+
+
+Underfull \hbox (badness 7116) in paragraph at lines 363--364
+[]\OT1/ptm/m/n/8 D. Sanchez, \Pop Songs Have Be-come Sig-nif-i-cantly Shorter
+ []
+
+
+Underfull \hbox (badness 2941) in paragraph at lines 363--364
+\OT1/ptm/m/n/8 Over the Past 5 Years," Dig-i-tal Mu-sic News, Jan. 18, 2019.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 363--364
+\OT1/ptm/m/n/8 https://www.digitalmusicnews.com/2019/01/18/streaming-music-
+ []
+
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -666,22 +835,20 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[4
-
-] (build/Report - Team SeaQewl.aux) ) 
+[5 <./explain.png> <./explain2.png>] (build/Milestone2.aux) ) 
 Here is how much of TeX's memory you used:
- 6224 strings out of 476025
- 94190 string characters out of 5790017
- 1928388 words of memory out of 5000000
- 26618 multiletter control sequences out of 15000+600000
+ 6240 strings out of 476025
+ 93625 string characters out of 5790017
+ 1911388 words of memory out of 5000000
+ 26634 multiletter control sequences out of 15000+600000
  546586 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,8n,62p,1041b,1600s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,8n,62p,1045b,1600s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "build/Report - Team SeaQewl.pdf" (4 pages, 219095 bytes).
+Output written on build/Milestone2.pdf (5 pages, 597769 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
- 33 compressed objects within 1 object stream
+ 63 PDF objects out of 1000 (max. 8388607)
+ 35 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -2,19 +2,19 @@ PWD /Users/jason/Desktop/MSDS/CSE_560/termProject/pdfs/report
 INPUT /usr/local/texlive/2023/texmf.cnf
 INPUT /usr/local/texlive/2023/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/jason/Desktop/MSDS/CSE_560/termProject/pdfs/report/Report - Team SeaQewl.tex
-OUTPUT build/Report - Team SeaQewl.log
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
+INPUT /Users/jason/Desktop/MSDS/CSE_560/termProject/pdfs/report/Milestone2.tex
+OUTPUT build/Milestone2.log
+INPUT ./IEEEtran.cls
+INPUT ./IEEEtran.cls
+INPUT IEEEtran.cls
+INPUT ./IEEEtran.cls
+INPUT ./IEEEtran.cls
+INPUT ./IEEEtran.cls
+INPUT ./IEEEtran.cls
+INPUT ./IEEEtran.cls
+INPUT IEEEtran.cls
+INPUT ./IEEEtran.cls
+INPUT IEEEtran.cls
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ot1ptm.fd
@@ -300,10 +300,10 @@ INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.de
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT build/Report - Team SeaQewl.aux
-INPUT build/Report - Team SeaQewl.aux
-INPUT build/Report - Team SeaQewl.aux
-OUTPUT build/Report - Team SeaQewl.aux
+INPUT build/Milestone2.aux
+INPUT build/Milestone2.aux
+INPUT build/Milestone2.aux
+OUTPUT build/Milestone2.aux
 INPUT /usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -324,12 +324,12 @@ INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/times/ptmrc7t.tfm
-INPUT /Users/jason/Desktop/MSDS/CSE_560/termProject/database_design/el_diagrams/el_diagram.png
-INPUT /Users/jason/Desktop/MSDS/CSE_560/termProject/database_design/el_diagrams/el_diagram.png
-INPUT /Users/jason/Desktop/MSDS/CSE_560/termProject/database_design/el_diagrams/el_diagram.png
-INPUT /Users/jason/Desktop/MSDS/CSE_560/termProject/database_design/el_diagrams/el_diagram.png
-OUTPUT build/Report - Team SeaQewl.pdf
-INPUT /Users/jason/Desktop/MSDS/CSE_560/termProject/database_design/el_diagrams/el_diagram.png
+INPUT ./el_diagram.png
+INPUT ./el_diagram.png
+INPUT el_diagram.png
+INPUT ./el_diagram.png
+OUTPUT build/Milestone2.pdf
+INPUT ./el_diagram.png
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -364,9 +364,9 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/adobe/times/ptmrc7t.vf
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/adobe/times/ptmbi7t.vf
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/times/ptmbi8r.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -381,7 +381,17 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/adobe/courier/pcrb7t.vf
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/courier/pcrb8r.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/vf/adobe/courier/pcrr7t.vf
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
-INPUT build/Report - Team SeaQewl.aux
+INPUT ./explain.png
+INPUT ./explain.png
+INPUT explain.png
+INPUT ./explain.png
+INPUT ./explain.png
+INPUT ./explain2.png
+INPUT ./explain2.png
+INPUT explain2.png
+INPUT ./explain2.png
+INPUT ./explain2.png
+INPUT build/Milestone2.aux
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb
